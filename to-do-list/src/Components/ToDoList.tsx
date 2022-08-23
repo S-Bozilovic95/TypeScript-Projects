@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AiFillDelete} from 'react-icons/ai';
+import { Context } from '../Context/Context';
 
-type ToDoListProps = {
-    allToDos: string[],
-    handleDelete: (id: number) => void
-}
 
-export const ToDoList: React.FC<ToDoListProps> = ({allToDos,handleDelete}) => {
+
+export const ToDoList: React.FC = () => {
+    const{allToDos,handleDelete} = useContext(Context);
+
 
 
     return (

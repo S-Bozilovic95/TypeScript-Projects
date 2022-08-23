@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { Context } from '../Context/Context';
 
-type FormProps = {
-    handleAllToDos: (el: string) => void,
-}
 
-export const Form: React.FC<FormProps> = ({handleAllToDos}) => {
+export const Form: React.FC = () => {
+    const{handleAllToDos} = useContext(Context);
     const [toDo, setToDo] = useState<string>("");
 
     const handleSubmit =(e:React.FormEvent<HTMLFormElement>) =>{
