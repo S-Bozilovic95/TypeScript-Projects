@@ -7,7 +7,7 @@ export const Form: React.FC = () => {
     const [toDo, setToDo] = useState<string>("");
 
     const handleSubmit =(e:React.FormEvent<HTMLFormElement>) =>{
-        e.preventDefault()
+        e.preventDefault();
         handleAllToDos(toDo);
         setToDo("");
     }

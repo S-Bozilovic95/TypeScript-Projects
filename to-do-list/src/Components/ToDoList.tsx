@@ -8,7 +8,6 @@ export const ToDoList: React.FC = () => {
     const{allToDos,handleDelete} = useContext(Context);
 
 
-
     return (
         <ul>
             {allToDos.length != 0 ? allToDos.map((el,index)=>{
